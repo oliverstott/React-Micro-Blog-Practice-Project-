@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-const Blogs = ( { blogs } ) => {
+const Blogs = ({ blogs }) => {
   return (
     <div className="blog">
-      {blogs.map( blog => (
+      {blogs.map(blog => (
         <article className="blog__article" key={blog.id}>
           <Link className="blog__anchor" to={`/blogs/${blog.id}`}>
             <h3 className="blog__title">{blog.title}</h3>
@@ -11,7 +11,7 @@ const Blogs = ( { blogs } ) => {
             <p className="blog__author">Author: {blog.author}</p>
           </Link>
         </article>
-      ) )
+      ))
       }
     </div >
   );

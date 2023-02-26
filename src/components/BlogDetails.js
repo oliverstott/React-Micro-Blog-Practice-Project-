@@ -4,7 +4,7 @@ import useFetch from "../useFetch";
 const BlogDetails = () => {
   const { id } = useParams();
   const url = `http://localhost:8000/blogs/${id}`;
-  const { data: blog, error, isPending } = useFetch( url );
+  const { data: blog, error, isPending } = useFetch(url);
 
   return (
     <div className="blog-details">
